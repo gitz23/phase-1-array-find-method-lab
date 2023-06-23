@@ -69,9 +69,8 @@ const record = [
 // console.log(record.find(2015));  
 
 function superbowlWin(record){
-  let year;
-  record.find((obj) => {if(obj.result === 'W'){
-      year = obj.year
-  }})
-  return year;
+    let result = record.find((obj) => obj.result === 'W')
+    if(result){
+      return result.year
+    }
 }
